@@ -32,6 +32,10 @@ If you need a reference on how to install npm, you can go to:
 * [How to Install Node and npm](http://treehouse.github.io/installation-guides/)
 
 * Download the project files, [here is the link if you need it](https://github.com/AADHIVAASI/gallery-app)
+* Add .env file inside the project root folder and insert
+```
+REACT_APP_CLIENT_ID=*your Unsplash API's client ID*
+```
 * Open your terminal/console and make sure to be inside the project folder.
 * Then type in your terminal/console
 ```
