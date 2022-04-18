@@ -59,7 +59,8 @@ npm start
 * [Axios](https://github.com/axios/axios) - Promise based HTTP client for the browser and node.js
 * [BlurHash](https://blurha.sh/) - A compact representation of a placeholder for an image.
 * [react-infinite-scroll-component](https://www.npmjs.com/package/react-infinite-scroll-component) - Infinite scrolling functionality
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
+
+### This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
 
 ## Authors
 
