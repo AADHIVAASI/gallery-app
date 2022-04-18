@@ -28,6 +28,7 @@ function App() {
 
   const [images, setImages] = useState([]);
   const [search, setSearch] = useState('');
+  const [noMoreItems, setNoMoreItems] = useState('');
   const apiBase = "https://api.unsplash.com/photos/random?client_id=";
   const client_id = process.env.REACT_APP_CLIENT_ID;
 
@@ -37,13 +38,21 @@ function App() {
   const scrollSearch = () => {
     axios
     .get(`${apiBase}${client_id}&query=${search}&count=10`)
-    .then(res => setImages([...images,...res.data]))
+    .then(res => { 
+      setImages([...images,...res.data])
+    }, err => {
+      setNoMoreItems('Yay! You have seen it all');
+  })
   }
 
   const fetchImages = () => {
     axios
     .get(`${apiBase}${client_id}&count=10`)
-    .then(res => setImages([...images, ...res.data]))
+    .then(res => {
+      setImages([...images, ...res.data])
+    }, err => {
+      setNoMoreItems('Yay! You have seen it all');
+    })
   }
   const searchImages = (e) => {
     setImages([])
@@ -53,7 +62,7 @@ function App() {
     .then(res => {
       setImages([...res.data])
     }, err => {
-      console.log(err.message);
+      setNoMoreItems('Nothing here, try searching something else...');
     })
   }
   return (
@@ -63,7 +72,8 @@ function App() {
       <Scroll dataLength={images.length} 
               next={search.trim()===''?fetchImages:scrollSearch} 
               hasMore={true}
-              loader={<Loader/>}
+              loader={noMoreItems.trim()===''?<Loader/>:<p style={{ textAlign: "center" }}>
+              <b>{noMoreItems}</b></p>}
               scrollThreshold="2px"
               endMessage={
                 <p style={{ textAlign: "center" }}>

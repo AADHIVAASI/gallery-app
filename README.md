@@ -59,9 +59,25 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Authors
 
-* **Vibheesha Velayudha**
+* [**Vibheesha Velayudha**](https://github.com/AADHIVAASI)
 
 ## Acknowledgments
 
 * [Loading Animation](https://loading.io/css/)
 * [BlurHash-Loading](https://github.com/blakewood84/react-blurhash-loading)
+
+## Checklist:
+- [x]  Display the photos loaded from the API in a grid containing 3 images in a row
+- [x]  Search functionality
+- [x]  Filter functionality on category
+- N/A- Pagination
+- [x]  Responsiveness
+- [x]  Infinite/Continuous Scroll
+- [x]  Use React
+- [x]  Write the code using ES6
+- [x]  Make sure you code is well formatted and clean
+- [x]  Separate concerns
+- []  Tests
+- [x]  Write functional code
+- [x]  Use a module loader/bundler
+- [x]  Documentation
